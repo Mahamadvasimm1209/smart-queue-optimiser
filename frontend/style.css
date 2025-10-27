@@ -1,4 +1,4 @@
-/* Reset and Base Styling */
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +7,17 @@
 }
 
 body {
-    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    background: linear-gradient(135deg, #00b4db, #0083b0);
     color: #fff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 40px;
+    padding: 40px 20px;
+    animation: fadeIn 1.2s ease;
 }
 
-/* Main Container */
+/* Container */
 .container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -24,7 +25,13 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     width: 400px;
+    max-width: 100%;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 /* Headings */
@@ -32,11 +39,12 @@ h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 600;
+    animation: slideDown 0.8s ease;
 }
 
-/* Join Queue Section */
+/* Join Section */
 .join-section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 input,
@@ -51,7 +59,7 @@ button {
 }
 
 input {
-    width: 65%;
+    width: 60%;
 }
 
 select {
@@ -65,28 +73,36 @@ button {
     color: white;
     cursor: pointer;
     transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
     background-color: #00b894;
+    transform: translateY(-2px);
 }
 
-/* Queue List */
+/* Live Queue */
 .queue {
     text-align: left;
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.15);
     padding: 10px;
     border-radius: 8px;
+    animation: fadeInUp 0.8s ease;
 }
 
 .queue-item {
     padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
 }
 
 .queue-item:last-child {
     border-bottom: none;
+}
+
+.queue-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Admin Button */
@@ -97,4 +113,55 @@ button:hover {
 
 .admin-btn:hover {
     background-color: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
