@@ -1,44 +1,100 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f4f6f8;
-    color: #333;
-    text-align: center;
-    margin-top: 40px;
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+body {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Headings */
 h1 {
-    color: #0070f3;
+    font-size: 1.8rem;
     margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Join Queue Section */
+.join-section {
+    margin-bottom: 30px;
 }
 
 input,
 select,
 button {
     padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
     margin: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
-button {
-    background-color: #0070f3;
-    color: white;
-    border: none;
+input {
+    width: 65%;
+}
+
+select {
+    background-color: #fff;
+    color: #0984e3;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0059c1;
+button {
+    background-color: #00cec9;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-#queueList {
+button:hover {
+    background-color: #00b894;
+}
+
+/* Queue List */
+.queue {
+    text-align: left;
     margin-top: 20px;
-    background: white;
-    border-radius: 10px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.queue-item {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.queue-item:last-child {
+    border-bottom: none;
+}
+
+/* Admin Button */
+.admin-btn {
+    margin-top: 20px;
+    background-color: #d63031;
+}
+
+.admin-btn:hover {
+    background-color: #c0392b;
 }
