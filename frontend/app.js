@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://smart-queue-optimiser.onrender.com";
 let myTicket = null;
 
 const socket = io(API_BASE);
