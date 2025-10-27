@@ -8,6 +8,7 @@ body {
 
 h1 {
     color: #0070f3;
+    margin-bottom: 20px;
 }
 
 input,
@@ -17,6 +18,7 @@ button {
     margin: 5px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 15px;
 }
 
 button {
